@@ -5,6 +5,10 @@ English | [日本語](README_ja.md)
 A 3D maze renderer built with raycasting, inspired by [Wolfenstein 3D](https://en.wikipedia.org/wiki/Wolfenstein_3D).
 This is a project from the [42 Tokyo](https://42tokyo.jp/) curriculum.
 
+## Demo
+
+![cub3D demo](images/cub3d_demo.gif)
+
 ## Overview
 
 cub3D renders a first-person view of a maze defined by a `.cub` map file. It uses the [DDA (Digital Differential Analyzer)](https://lodev.org/cgtutor/raycasting.html) algorithm to cast rays and draw textured walls with correct perspective.

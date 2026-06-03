@@ -5,6 +5,10 @@
 [Wolfenstein 3D](https://en.wikipedia.org/wiki/Wolfenstein_3D) にインスパイアされた、レイキャスティングによる3D迷路レンダラーです。
 [42 Tokyo](https://42tokyo.jp/) のカリキュラム課題として作成しました。
 
+## デモ
+
+![cub3D デモ](images/cub3d_demo.gif)
+
 ## 概要
 
 cub3D は `.cub` マップファイルで定義された迷路を一人称視点で描画します。[DDA（Digital Differential Analyzer）](https://lodev.org/cgtutor/raycasting.html)アルゴリズムを使用してレイを飛ばし、テクスチャ付きの壁を正しいパースペクティブで描画します。
