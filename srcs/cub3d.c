@@ -104,8 +104,10 @@ void	free_cub3d(t_cub3d *cub3d)
 {
 	if (cub3d->win && cub3d->mlx)
 		mlx_destroy_window(cub3d->mlx, cub3d->win);
+#ifndef __APPLE__
 	if (cub3d->mlx)
 		mlx_destroy_display(cub3d->mlx);
+#endif
 	if (cub3d->config)
 	{
 		free(cub3d->config->north_texture);

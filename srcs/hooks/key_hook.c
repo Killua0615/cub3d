@@ -19,7 +19,7 @@
 int	key_up(int keycode, t_cub3d *data)
 {
 	if (keycode == KEYCODE_ESC)
-		mlx_loop_end(data->mlx);
+		destroy_hook(data);
 	else if (keycode == KEYCODE_W)
 		data->key_state->w = false;
 	else if (keycode == KEYCODE_A)

@@ -15,18 +15,22 @@ OBJS := $(SRCS:.c=.o)
 LIBFT_DIR := libft
 LIBFT := $(LIBFT_DIR)/libft.a
 
+UNAME_S := $(shell uname -s)
+
+ifeq ($(UNAME_S),Darwin)
+MLX_DIR := minilibx_macos
+MLX_URL := https://github.com/ncoden/minilibx_macos.git
+LIBS := -lmlx -lm -framework OpenGL -framework AppKit
+else
 MLX_DIR := minilibx-linux
+MLX_URL := https://github.com/42Paris/minilibx-linux.git
+LIBS := -lmlx -lXext -lX11 -lm -lz
+endif
+
 MINILIBX := $(MLX_DIR)/libmlx.a
 
 CFLAGS += -I$(MLX_DIR)
 LDFLAGS += -L$(MLX_DIR)
-LIBS := -lmlx -lXext -lX11 -lm -lz
-
-ifeq ($(shell uname -s),Darwin)
-X11_DIR := /opt/X11
-CFLAGS += -I$(X11_DIR)/include
-LDFLAGS += -L$(X11_DIR)/lib
-endif
 
 MAKE_LIBFT = $(MAKE) -C $(LIBFT_DIR)
 
@@ -41,7 +45,7 @@ $(LIBFT):
 	$(MAKE_LIBFT)
 
 $(MINILIBX):
-	@if [ ! -d $(MLX_DIR) ]; then git clone https://github.com/42Paris/minilibx-linux.git; fi
+	@if [ ! -d $(MLX_DIR) ]; then git clone $(MLX_URL) $(MLX_DIR); fi
 	$(MAKE) -C $(MLX_DIR)
 
 %.o: %.c

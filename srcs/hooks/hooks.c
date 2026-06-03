@@ -33,7 +33,12 @@ int	render(t_cub3d *data)
 
 int	destroy_hook(t_cub3d *data)
 {
+#ifdef __APPLE__
+	end_cub3d(data);
+	exit(EXIT_SUCCESS);
+#else
 	mlx_loop_end(data->mlx);
+#endif
 	return (0);
 }
 
@@ -71,7 +76,9 @@ void	end_cub3d(t_cub3d *cub3d)
 		mlx_destroy_image(cub3d->mlx, cub3d->img->img);
 	free(cub3d->img);
 	mlx_destroy_window(cub3d->mlx, cub3d->win);
+#ifndef __APPLE__
 	mlx_destroy_display(cub3d->mlx);
+#endif
 	free(cub3d->mlx);
 }
 

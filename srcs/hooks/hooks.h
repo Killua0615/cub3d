@@ -18,13 +18,23 @@
 typedef struct s_cub3d	t_cub3d;
 typedef struct s_player	t_player;
 
-# define KEYCODE_ESC 65307
-# define KEYCODE_W 119
-# define KEYCODE_A 97
-# define KEYCODE_S 115
-# define KEYCODE_D 100
-# define KEYCODE_LEFT 65361
-# define KEYCODE_RIGHT 65363
+# ifdef __APPLE__
+#  define KEYCODE_ESC 53
+#  define KEYCODE_W 13
+#  define KEYCODE_A 0
+#  define KEYCODE_S 1
+#  define KEYCODE_D 2
+#  define KEYCODE_LEFT 123
+#  define KEYCODE_RIGHT 124
+# else
+#  define KEYCODE_ESC 65307
+#  define KEYCODE_W 119
+#  define KEYCODE_A 97
+#  define KEYCODE_S 115
+#  define KEYCODE_D 100
+#  define KEYCODE_LEFT 65361
+#  define KEYCODE_RIGHT 65363
+# endif
 
 # define VELOCITY 0.03
 //# define ROTATION_ANGLE 0.005
