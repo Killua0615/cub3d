@@ -1,6 +1,6 @@
 # cub3D
 
-> [English version](README.md)
+[English](README.md) | 日本語
 
 [Wolfenstein 3D](https://en.wikipedia.org/wiki/Wolfenstein_3D) にインスパイアされた、レイキャスティングによる3D迷路レンダラーです。
 [42 Tokyo](https://42tokyo.jp/) のカリキュラム課題として作成しました。
