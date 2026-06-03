@@ -1,6 +1,6 @@
 # cub3D
 
-> [日本語版はこちら](README_ja.md)
+English | [日本語](README_ja.md)
 
 A 3D maze renderer built with raycasting, inspired by [Wolfenstein 3D](https://en.wikipedia.org/wiki/Wolfenstein_3D).
 This is a project from the [42 Tokyo](https://42tokyo.jp/) curriculum.
